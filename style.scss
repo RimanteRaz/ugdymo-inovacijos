@@ -1,0 +1,32 @@
+// VARIABLES
+
+// Colors:
+$primary: #00576b;
+$primary-light: #00829f;
+$primary-dark: #002e40;
+$dark: #141414;
+$dark-gray: #3b3b3b;
+$light-gray: #e0e1e4;
+$light-1: #f5f5f5;
+$light-2: #eceff1;
+
+$base-fs: 0.8rem;
+
+// STYLES:
+
+// Typography:
+
+@for $i from 1 to 7 {
+  h#{$i} {
+    font-size: $base-fs * (7-$i) * 1.15;
+    font-weight: 700;
+  }
+}
+
+p {
+  font-size: $base-fs * 1.2;
+}
+
+.text-small {
+  font-size: $base-fs;
+}
