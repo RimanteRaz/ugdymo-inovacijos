@@ -1,7 +1,7 @@
-// Importing fonts
+// ==IMPORTS
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
-// Functions
+// ==FUNCTIONS
 
 @function pow($number, $exponent) {
   $value: 1;
@@ -15,9 +15,9 @@
   @return $value;
 }
 
-// VARIABLES
+// ==VARIABLES
 
-// Colors:
+// ===Colors
 $primary: #00576b;
 $primary-light: #00829f;
 $primary-dark: #002e40;
@@ -27,11 +27,27 @@ $light-gray: #e0e1e4;
 $light-1: #f5f5f5;
 $light-2: #eceff1;
 
+// ===Text
 $text-ratio: 1.25;
 
-// STYLES:
+// ===Media Queries
+$tablet: 43.75em; //700px
+$small-screen: 62em; //992px
+$large-screen: 87em; //1392px
 
-// Backgrounds
+/*
+  @media (min-width: $tablet) {
+
+  }
+  @media (min-width: $small-screen) { 
+    
+  }
+  @media (min-width: $large-screen) {
+    
+  }
+*/
+
+// ==BACKGROUNDS
 
 .dark-bg {
   background-color: $dark;
@@ -45,16 +61,20 @@ $text-ratio: 1.25;
   background-color: $light-2;
 }
 
-// Typography:
+// == BUTTONS
 
 * {
   font-family: 'Open Sans', sans-serif;
-  color: $dark;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 @for $i from 1 to 7 {
   h#{$i} {
     font-size: 1rem * pow($text-ratio, (6-$i));
+    font-weight: 400;
+    margin: 1em 0em;
   }
 }
 
@@ -74,9 +94,10 @@ p, .text-medium {
 
 .btn {
   border-radius: 45px;
-  padding: 0.5em 2em 0.5em 2em;
+  padding: 0.5em 2em;
   border: none;
   font-weight: 700;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary {
@@ -123,4 +144,150 @@ p, .text-medium {
     background-color: rgba($dark, .15);
     font-weight: 600;
   }
+}
+
+// == LAYOUT
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+  @media (min-width: $tablet) {
+    width: 85%
+  }
+  @media (min-width: $large-screen){
+    max-width: 75em;
+  }
+}
+
+// == NAVIGATION
+
+body{
+  overflow-x: hidden;
+}
+
+nav {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 3.25rem;
+  }
+  background-color: $primary;
+}
+
+.logo {
+  color: $light-1;
+  position: relative;
+  z-index: 1;
+  h5 {
+    margin: 0;
+  }
+}
+
+.nav-links{
+  position: absolute;
+  right: 0px;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  padding-top: 2.9rem;
+  background-color: $primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transform: translateX(100%);
+  li {
+    list-style: none;
+    opacity: 0;
+    a{
+      @extend .btn-primary;
+      text-decoration: none;
+    }
+  }
+  /*
+  .btn {
+  border-radius: 45px;
+  padding: 0.5em 2em;
+  border: none;
+  font-weight: 700;
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: $primary;
+  color: $light-1;
+  &:hover {
+    background-color: $primary-dark;
+  }
+}
+  */
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
+  @media (min-width: $small-screen) {
+    display: flex;
+    width: 40%;
+    height: inherit;
+    padding-top: 0;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    transform: none;
+    li {
+      opacity: 1; 
+    }
+  }
+  @media (min-width: $large-screen) {
+    width: 35%;
+  }
+}
+
+.burger{
+  cursor: pointer;
+  display: inline-block;
+  padding: 9px;
+  &:hover{
+    background-color: $primary-dark;
+  }
+  @media (min-width: $small-screen) { 
+    display: none;
+  }
+}
+
+.burger div{
+  width: 24px;
+  height: 2px;
+  background-color:$light-1;
+  margin: 6px;
+  transition: all 0.3s ease;
+}
+
+
+.nav-active {
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in;
+}
+
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
