@@ -187,27 +187,29 @@ p, .text-medium {
 
 // === TWO COLUMN GRID
 
-.row {
+.row-2-col {
   @media (min-width: $small-screen) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
   }
+
+  .col-50{
+    @media (min-width: $small-screen) {
+      flex: 50%;
+    }
+  }  
 }
 
-.col-50{
-  @media (min-width: $small-screen) {
-    flex: 50%;
-  }
-}
+
 
 
 //https://css-tricks.com/ie10-compatible-grid-auto-placement-with-flexbox/
 
 // === 3 COLUMN GRID
 
-.grid-3-col {
+.row-3-col {
   @media (min-width: $tablet) {
     display: -ms-flexbox;
     display: flex;
@@ -219,6 +221,7 @@ p, .text-medium {
       flex: 1 1 auto;
     }
   }
+
 }
 
 .grid-cell {
@@ -234,7 +237,7 @@ p, .text-medium {
 @media (min-width: $tablet) and (max-width: calc(#{$small-screen} - 0.01em)) {
   $width: calc(50% - #{$col-gap});
 
-  .grid:after {
+  .row-3-col:after {
     width: $width;
   }
 
@@ -253,7 +256,7 @@ p, .text-medium {
 @media (min-width: $small-screen) {
   $width: calc(33% - #{$col-gap});
 
-  .grid:after {
+  .row-3-col:after {
     width: $width;
   }
 
@@ -458,7 +461,7 @@ nav {
   .img-div {
     img {
       display: block;
-      border-radius: 30px 30px 0 0;
+      // border-radius: 30px 30px 0 0;
       max-width: 100%;
       height: auto;
     }
@@ -495,10 +498,23 @@ nav {
 }
 
 .title-row {
-  .read-all {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+  margin-bottom: $col-gap;
+  padding-right: 0.8rem;
+  .read-all-1 {
+    display: none; 
+    @media (min-width: $small-screen) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 }
 
+.read-all-2 {
+  padding-top: $col-gap;
+  display: flex;
+  justify-content: center;
+  @media (min-width: $small-screen) {
+    display: none;
+  }
+}
