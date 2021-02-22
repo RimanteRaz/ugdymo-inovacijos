@@ -168,6 +168,16 @@ p, .text-medium {
   }
 }
 
+// == ELEMENTS
+
+.card{
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid $light-gray;
+  background-color: white;
+}
+
+
 // == LAYOUT
 
 .container{
@@ -201,9 +211,6 @@ p, .text-medium {
     }
   }  
 }
-
-
-
 
 //https://css-tricks.com/ie10-compatible-grid-auto-placement-with-flexbox/
 
@@ -449,15 +456,13 @@ nav {
   }
 }
 
-// == New Posts
+// == New Post
+
 .new-post {
+  @extend .card;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
-  border-radius: 30px;
-  border: 1px solid $light-gray;
-  background-color: white;
   .img-div {
     img {
       display: block;
@@ -518,3 +523,38 @@ nav {
     display: none;
   }
 }
+
+// == SUBMIT YOUR INNOVATION
+
+.submit-section{
+  @media (min-width: $tablet){
+    max-width: 60ch;
+  }
+  h4 {
+    font-weight: 600;
+  }
+  .text-card{
+    @extend .card;
+    padding: 1.5rem 3rem 2rem 2.5rem;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+  }
+}
+
+// .row-2-col {
+//   @media (min-width: $small-screen) {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+
+//   }
+
+//   .col-50{
+//     @media (min-width: $small-screen) {
+//       flex: 50%;
+//     }
+//   }  
+// }

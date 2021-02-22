@@ -144,6 +144,13 @@ p, .text-medium {
   font-weight: 600;
 }
 
+.card, .submit-section .text-card, .new-post {
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid #e0e1e4;
+  background-color: white;
+}
+
 .container {
   margin: 0 5vw;
 }
@@ -417,10 +424,6 @@ nav .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
-  border-radius: 30px;
-  border: 1px solid #e0e1e4;
-  background-color: white;
 }
 .new-post .img-div img {
   display: block;
@@ -481,6 +484,23 @@ nav .container {
   .read-all-2 {
     display: none;
   }
+}
+
+@media (min-width: 43.75em) {
+  .submit-section {
+    max-width: 60ch;
+  }
+}
+.submit-section h4 {
+  font-weight: 600;
+}
+.submit-section .text-card {
+  padding: 1.5rem 3rem 2rem 2.5rem;
+}
+.submit-section .button {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
