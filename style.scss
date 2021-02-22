@@ -54,6 +54,15 @@ $col-gap: 2rem;
 
 .dark-bg {
   background-color: $dark;
+  color: $light-1;
+  
+  a{
+    color:$light-1;
+    text-decoration-color: rgba($light-1, 0.5);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 .light-1-bg {
@@ -85,12 +94,16 @@ $col-gap: 2rem;
   font-size: 1rem * $text-ratio;
 }
 
-p, .text-medium {
+.text-medium {
   font-size: 1rem;
 }
 
-.text-small {
+small, .text-small {
   font-size: 1rem / $text-ratio;
+}
+
+p {
+  padding-bottom: 0.5em;
 }
 
 .section-title {
@@ -536,11 +549,35 @@ nav {
   .text-card{
     @extend .card;
     padding: 1.5rem 3rem 2rem 2.5rem;
+    p{
+      padding-bottom: 0;
+    }
   }
   .button {
     display: flex;
     justify-content: center;
-    padding-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+}
+
+// == FOOTER
+
+.footer {
+  padding-bottom: 8rem;
+  @media(min-width: $small-screen) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .left {
+    max-width: 50ch;
+    padding-bottom: 2rem;
+    h5 {
+      padding-top: 0;
+    }
+  }
+  .right {
+    max-width: 37ch;
   }
 }
 

@@ -12,6 +12,14 @@
 */
 .dark-bg {
   background-color: #141414;
+  color: #f5f5f5;
+}
+.dark-bg a {
+  color: #f5f5f5;
+  text-decoration-color: rgba(245, 245, 245, 0.5);
+}
+.dark-bg a:hover {
+  opacity: 0.8;
 }
 
 .light-1-bg {
@@ -69,12 +77,16 @@ h6 {
   font-size: 1.25rem;
 }
 
-p, .text-medium {
+.text-medium {
   font-size: 1rem;
 }
 
-.text-small, .tag {
+small, .text-small, .tag {
   font-size: 0.8rem;
+}
+
+p {
+  padding-bottom: 0.5em;
 }
 
 .section-title {
@@ -497,10 +509,34 @@ nav .container {
 .submit-section .text-card {
   padding: 1.5rem 3rem 2rem 2.5rem;
 }
+.submit-section .text-card p {
+  padding-bottom: 0;
+}
 .submit-section .button {
   display: flex;
   justify-content: center;
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+.footer {
+  padding-bottom: 8rem;
+}
+@media (min-width: 62em) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer .left {
+  max-width: 50ch;
+  padding-bottom: 2rem;
+}
+.footer .left h5 {
+  padding-top: 0;
+}
+.footer .right {
+  max-width: 37ch;
 }
 
 /*# sourceMappingURL=style.css.map */
