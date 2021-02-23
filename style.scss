@@ -192,6 +192,23 @@ p {
 
 
 // == LAYOUT
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: $light-1;
+}
+
+.content{
+  flex: 1 0 auto;
+}
+
+footer{
+  flex-shrink: 0;
+}
 
 .container{
   margin: 0 5vw;
@@ -581,17 +598,3 @@ nav {
   }
 }
 
-// .row-2-col {
-//   @media (min-width: $small-screen) {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-
-//   }
-
-//   .col-50{
-//     @media (min-width: $small-screen) {
-//       flex: 50%;
-//     }
-//   }  
-// }
