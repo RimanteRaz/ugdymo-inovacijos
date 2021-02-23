@@ -1,3 +1,5 @@
+// NAVBAR:
+
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -24,3 +26,16 @@ const navSlide = () => {
 }
 
 navSlide();
+
+// Masonry Layout for archive pages
+
+
+
+let magicGrid = new MagicGrid({
+    container: ".blog-posts",
+    static: true,
+    animate: true,
+    gutter: 60
+  });
+   
+magicGrid.listen();
