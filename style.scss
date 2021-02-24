@@ -654,10 +654,9 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // width: 30rem;
   width: 90vw;
   @media (min-width: $tablet) {
-    width: 26rem;
+    width: 28rem;
   }
   .img-div {
     img {

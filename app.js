@@ -29,13 +29,11 @@ navSlide();
 
 // Masonry Layout for archive pages
 
-
-
 let magicGrid = new MagicGrid({
-    container: ".blog-posts",
+    container: ".archive-grid",
     static: true,
     animate: true,
-    gutter: 60
+    gutter: 40  
   });
    
 magicGrid.listen();
