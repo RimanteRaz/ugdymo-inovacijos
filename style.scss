@@ -38,18 +38,6 @@ $large-screen: 87em; //1392px
 // ===Layout
 $col-gap: 2rem;
 
-/*
-  @media (min-width: $tablet) {
-
-  }
-  @media (min-width: $small-screen) { 
-    
-  }
-  @media (min-width: $large-screen) {
-    
-  }
-*/
-
 // == BACKGROUNDS
 
 .dark-bg {
@@ -103,7 +91,8 @@ $col-gap: 2rem;
 }
 
 p {
-  padding-bottom: 0.5em;
+  padding-bottom: 0.75em;
+  line-height: 1.6;
 }
 
 .bold {
@@ -118,8 +107,14 @@ p {
   padding: 0;
   font-weight: 700;
 }
-// == BUTTONS
+// == BUTTONS AND HYPERLINKS
 
+a {
+  color: $primary;
+  &:hover {
+    color: $primary-dark;
+  }
+}
 
 .btn {
   display: inline-block;
@@ -953,12 +948,13 @@ nav {
     padding: 2rem 3rem 1.5rem 3rem;
   }
   @media (min-width: $small-screen) {
-    padding: 2.5rem 4rem 2rem 4rem;
+    padding: 3rem 4rem 2rem 4rem;
     max-width: 90%;
     margin: 0 auto;
   }
   
   form {
+    margin-top: 2rem;
     margin-bottom: 2rem;
     label{
       @media (min-width: $tablet){
@@ -1020,9 +1016,21 @@ nav {
     }
 
   }
-  
+}
 
-  
+// == SINGLE PAGE
 
-  
+.page-content{
+  @extend .card;
+  padding: 0.5rem 1.2rem;
+  @media (min-width: $tablet) {
+    padding: 2rem 3rem 1.5rem 3rem;
+    margin: 0 auto;
+    max-width: 80ch;
+  }
+  @media (min-width: $small-screen) {
+    padding: 2.5rem 12ch 3rem 10ch;
+    max-width: 90ch;
+    margin: 0 auto;
+  }
 }
