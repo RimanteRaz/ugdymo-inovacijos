@@ -362,7 +362,7 @@ footer{
 
 nav {
   background-color: $primary;
-  max-height: 3rem;  
+  max-height: 3.5rem;  
 }
 
 .nav-container{
@@ -376,42 +376,51 @@ nav {
   }
 }
 
-.nav-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $primary;
-  padding: 0 3vw;
-  @media (min-width: $small-screen){
-    padding: 0 8vw;
-  }
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
-}
-
 .logo {
   color: $light-1;
   font-weight: 600;
   margin-left: 3vw;
   @media (min-width: $small-screen){
-    margin-left: 8vw;
+    display: none;
   }
   h6 {
     padding-top: 0.9rem;
   }
 }
 
-// .primary-menu {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
 
-.secondary-menu{
-  // margin-right: -1rem;
-  // margin-left: 1rem;
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary;
+  padding: 0 3vw;
+  min-height: 100vh;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  @media (min-width: $small-screen){
+    padding: 0;
+    margin: 0 8vw;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-height: 3.5rem;
+    transform: none;
+    transition: none;
+  }
 }
+
+
+.primary-menu {
+  @media (min-width: $small-screen) {
+    margin-right: auto;
+  }
+}
+
+// .secondary-menu{
+//   margin-right: -1rem;
+//   margin-left: 1rem;
+// }
 
 .nav-links {
   display: flex;
@@ -419,10 +428,16 @@ nav {
   align-items: center;
   padding-bottom: 2rem;
   list-style: none;
+  @media (min-width: $small-screen) {
+    flex-direction: row;
+    padding-bottom: 0;
+  }
   li {
     display: block;
     padding: 2em 0;
-    
+    @media (min-width: $small-screen) {
+      padding: 0.5rem 0;
+    }
     a{
       padding: 0.8em 2em;
       color: $light-1;
@@ -433,6 +448,9 @@ nav {
       transition: background-color 0.3s ease 0s;
       opacity: 0;
       transition: opacity 150ms ease-in-out;
+      @media (min-width: $small-screen) {
+        opacity: 1;
+      }
       // font-weight: 600;
       &:hover {
         color: rgba($light-1, 0.9);
@@ -445,6 +463,9 @@ nav {
 .nav-bar .cta {
   opacity: 0;
   transition: opacity 150ms ease-in-out;
+  @media (min-width: $small-screen) {
+    opacity: 1;
+  }
 }
 
 .nav-toggle {
@@ -461,7 +482,7 @@ nav {
   align-items: center;
   margin-right: 3vw;
   @media (min-width: $small-screen){
-    margin-right: 8vw;
+    display: none;
   }
 }
 
@@ -496,7 +517,9 @@ nav {
   transform: scale(1,1);
 }
 
+
 .nav-toggle:checked ~ .nav-bar a {
+  
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
@@ -505,6 +528,7 @@ nav {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
+
 
 // body{
 //   overflow-x: hidden;

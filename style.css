@@ -316,29 +316,13 @@ footer {
 }
 nav {
   background-color: #00576b;
-  max-height: 3rem;
+  max-height: 3.5rem;
 }
 
 @media (min-width: 87em) {
   .nav-container {
     max-width: 75em;
     margin: 0 auto;
-  }
-}
-
-.nav-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #00576b;
-  padding: 0 3vw;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
-}
-@media (min-width: 62em) {
-  .nav-bar {
-    padding: 0 8vw;
   }
 }
 
@@ -349,11 +333,40 @@ nav {
 }
 @media (min-width: 62em) {
   .logo {
-    margin-left: 8vw;
+    display: none;
   }
 }
 .logo h6 {
   padding-top: 0.9rem;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #00576b;
+  padding: 0 3vw;
+  min-height: 100vh;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+@media (min-width: 62em) {
+  .nav-bar {
+    padding: 0;
+    margin: 0 8vw;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-height: 3.5rem;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (min-width: 62em) {
+  .primary-menu {
+    margin-right: auto;
+  }
 }
 
 .nav-links {
@@ -363,9 +376,20 @@ nav {
   padding-bottom: 2rem;
   list-style: none;
 }
+@media (min-width: 62em) {
+  .nav-links {
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+}
 .nav-links li {
   display: block;
   padding: 2em 0;
+}
+@media (min-width: 62em) {
+  .nav-links li {
+    padding: 0.5rem 0;
+  }
 }
 .nav-links li a {
   padding: 0.8em 2em;
@@ -378,6 +402,11 @@ nav {
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
+@media (min-width: 62em) {
+  .nav-links li a {
+    opacity: 1;
+  }
+}
 .nav-links li a:hover {
   color: rgba(245, 245, 245, 0.9);
   background-color: #002e40;
@@ -386,6 +415,11 @@ nav {
 .nav-bar .cta {
   opacity: 0;
   transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 62em) {
+  .nav-bar .cta {
+    opacity: 1;
+  }
 }
 
 .nav-toggle {
@@ -404,7 +438,7 @@ nav {
 }
 @media (min-width: 62em) {
   .nav-toggle-label {
-    margin-right: 8vw;
+    display: none;
   }
 }
 
