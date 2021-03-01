@@ -314,132 +314,137 @@ footer {
     margin-right: calc(33% + 4rem);
   }
 }
-body {
-  overflow-x: hidden;
-}
-
 nav {
   background-color: #00576b;
-  box-shadow: 0px 4px 20px rgba(0, 87, 107, 0.1);
+  max-height: 3rem;
 }
-nav .container {
+
+@media (min-width: 87em) {
+  .nav-container {
+    max-width: 75em;
+    margin: 0 auto;
+  }
+}
+
+.nav-bar {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  min-height: 3.25rem;
+  background-color: #00576b;
+  padding: 0 3vw;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+@media (min-width: 62em) {
+  .nav-bar {
+    padding: 0 8vw;
+  }
 }
 
 .logo {
   color: #f5f5f5;
-  position: relative;
-  z-index: 1;
+  font-weight: 600;
+  margin-left: 3vw;
 }
-.logo h5 {
-  padding: 0;
+@media (min-width: 62em) {
+  .logo {
+    margin-left: 8vw;
+  }
+}
+.logo h6 {
+  padding-top: 0.9rem;
 }
 
 .nav-links {
-  position: absolute;
-  right: 0px;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  padding-top: 2.9rem;
-  background-color: #00576b;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  transform: translateX(100%);
+  padding-bottom: 2rem;
+  list-style: none;
 }
 .nav-links li {
-  list-style: none;
-  opacity: 0;
+  display: block;
+  padding: 2em 0;
 }
 .nav-links li a {
+  padding: 0.8em 2em;
   color: #f5f5f5;
-  font-weight: 600;
+  background-color: #00576b;
+  border-radius: 45px;
+  padding: 0.5em 2em;
   text-decoration: none;
-  padding-bottom: 2px;
-  opacity: 1;
+  transition: background-color 0.3s ease 0s;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
 }
 .nav-links li a:hover {
-  opacity: 0.9;
-  text-shadow: 0px 0px 40px rgba(245, 245, 245, 0.7);
-}
-@media (min-width: 43.75em) {
-  .nav-links {
-    width: 50%;
-  }
-}
-@media (min-width: 62em) {
-  .nav-links {
-    display: flex;
-    width: 40%;
-    height: inherit;
-    padding-top: 0;
-    flex-direction: row;
-    position: relative;
-    top: 0;
-    transform: none;
-  }
-  .nav-links li {
-    opacity: 1;
-  }
-}
-@media (min-width: 87em) {
-  .nav-links {
-    width: 35%;
-  }
-}
-
-.burger {
-  cursor: pointer;
-  display: inline-block;
-  padding: 9px;
-}
-.burger:hover {
+  color: rgba(245, 245, 245, 0.9);
   background-color: #002e40;
 }
-@media (min-width: 62em) {
-  .burger {
-    display: none;
-  }
-}
 
-.burger div {
-  width: 24px;
-  height: 2px;
-  background-color: #f5f5f5;
-  margin: 6px;
-  transition: all 0.3s ease;
-}
-
-.nav-active {
-  transform: translateX(0%);
-  transition: transform 0.5s ease-in;
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
+.nav-bar .cta {
   opacity: 0;
+  transition: opacity 150ms ease-in-out;
 }
 
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  margin-right: 3vw;
+}
+@media (min-width: 62em) {
+  .nav-toggle-label {
+    margin-right: 8vw;
+  }
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: #f5f5f5;
+  height: 2px;
+  width: 2rem;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+.nav-toggle:checked ~ .nav-bar {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ .nav-bar a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle:checked ~ .nav-bar .cta {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
 }
 
 @media (min-width: 43.75em) {
