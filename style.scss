@@ -15,7 +15,7 @@
   @return $value;
 }
 
-// ==VARIABLES
+// == VARIABLES
 
 // ===Colors
 $primary: #00576b;
@@ -362,7 +362,7 @@ footer{
 
 nav {
   width: 100%;
-  background-color: $primary;
+  background-color: $dark;
   // background-color: $dark;
 }
 
@@ -383,34 +383,50 @@ nav {
 
 .logo {
   color: $light-1;
+  z-index: 1;
   h6{
     padding: 0;
+  }
+  @media (min-width: $tablet) {
+    display: none;
   }
 }
 
 .nav-bar{
   position: absolute;
-  top: 4rem;
+  top: 0;
   left: 0;
+  padding-top: 4rem;
+  z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $primary;
+  background-color: $dark;
   // background-color: $dark;
   width: 100%;
-  height: 100%;
-  padding: 0 3vw;
+  height: 100vh;
+  
   // Animation:
   transform: scale(1,0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
-  @media (min-width: $small-screen){
-    padding: 0 8vw;
+  @media (min-width: $tablet) {
+    display: none;
   }
 }
 
 .nav-bar.open{
   transform: scale(1,1);
+}
+
+.dt-nav-bar{
+  display: none;
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .nav-links {
@@ -419,16 +435,35 @@ nav {
   align-items: center;
   li {
     list-style: none;
-    padding: 2rem 0;
+    padding: 1rem 0;
     a{
       color: $light-1;
       text-decoration: none;
       border-radius: 45px;
       padding: 0.5em 2em;
-      transition: background-color 250ms ease;
+      transition: color 250ms ease;
       &:hover {
-        background-color: $primary-dark;
-        // color: $primary-light;
+        color: $primary-light;
+      }
+    }
+  }
+}
+
+.dt-nav-links ul{
+  display: none;
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    li {
+      list-style: none;
+      a {
+        color: $light-1;
+        text-decoration: none;
+        transition: color 250ms ease;
+        &:hover {
+          color: $primary-light;
+        }
       }
     }
   }
@@ -453,8 +488,25 @@ nav {
   }
 }
 
+.dt-primary-menu {
+  margin-right: auto;
+  ul {
+    li{ 
+      padding-right: 1.2rem;
+    }
+  }
+}
+
+.dt-secondary-menu {
+  ul {
+    li {
+      padding-left: 1.2rem;
+    }
+  }
+}
+
 .nav-cta {
-  margin: 2rem 0;
+  margin: 1rem 0;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
@@ -462,6 +514,53 @@ nav {
 .nav-cta.open {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
+}
+
+.dt-nav-cta {
+  @media (min-width: $tablet) {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      width: 35px;
+      height: 35px;
+      transition: width 250ms ease-in-out;
+      img {
+        position: relative;
+        right: 1px;
+        height: 20px;
+        width: auto;
+      }
+      span {
+        // display: none;
+        position: absolute;
+        transform: scale(0,1);
+        opacity: 0;
+        transition: opacity 150ms ease-in-out 200ms;
+        transform-origin: left;
+      }
+    }
+  }
+  @media (min-width: $small-screen) {
+    a {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      width: 30ch;
+      img {
+        margin-right: 0.5em;
+      }
+      span {
+        position: relative;
+        // display: inline-block;
+        transform: scale(1,1);
+        
+        opacity: 1;
+        margin-right: 0.5em;
+        // transition: opacity 150ms ease-in-out 200ms;
+      }
+    }
+  }
 }
 
 // Animated hamburger icon form: https://codepen.io/designcouch/pen/Atyop
@@ -493,6 +592,9 @@ nav {
     &:nth-child(4) {
       top: 20px;
     }
+  }
+  @media (min-width: $tablet) {
+    display: none;
   }
 }
 
