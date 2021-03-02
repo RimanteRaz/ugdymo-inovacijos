@@ -540,6 +540,20 @@ nav {
         transition: opacity 150ms ease-in-out 200ms;
         transform-origin: left;
       }
+      &:hover {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        width: 30ch;
+        img {
+          margin-right: 0.5em;
+        }
+        span {
+          position: relative;
+          transform: scale(1,1);
+          opacity: 1;
+          margin-right: 0.5em;
+        }
+      }
     }
   }
   @media (min-width: $small-screen) {
@@ -552,12 +566,9 @@ nav {
       }
       span {
         position: relative;
-        // display: inline-block;
         transform: scale(1,1);
-        
         opacity: 1;
         margin-right: 0.5em;
-        // transition: opacity 150ms ease-in-out 200ms;
       }
     }
   }

@@ -487,6 +487,20 @@ nav {
     transition: opacity 150ms ease-in-out 200ms;
     transform-origin: left;
   }
+  .dt-nav-cta a:hover {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 30ch;
+  }
+  .dt-nav-cta a:hover img {
+    margin-right: 0.5em;
+  }
+  .dt-nav-cta a:hover span {
+    position: relative;
+    transform: scale(1, 1);
+    opacity: 1;
+    margin-right: 0.5em;
+  }
 }
 @media (min-width: 62em) {
   .dt-nav-cta a {
