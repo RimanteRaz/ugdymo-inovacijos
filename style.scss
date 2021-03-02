@@ -360,130 +360,216 @@ footer{
 
 // == NAVIGATION
 
-body{
-  overflow-x: hidden;
+nav {
+  width: 100%;
+  background-color: $primary;
 }
 
-nav {
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 3.25rem;
-    
+.nav-container {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3vw;
+  @media (min-width: $small-screen){
+    margin: 0 8vw;
   }
-  background-color: $primary;
-  box-shadow: 0px 4px 20px rgba($primary, .1);
+  @media (min-width: $large-screen){
+    max-width: 75em;
+    margin: 0 auto;
+  }
 }
 
 .logo {
   color: $light-1;
-  position: relative;
-  z-index: 1;
-  h5 {
+  h6{
     padding: 0;
   }
 }
 
-.nav-links{
-  position: absolute;
-  right: 0px;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  padding-top: 2.9rem;
-  background-color: $primary;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  transform: translateX(100%);
-  li {
-    list-style: none;
-    opacity: 0;
-    a{
-      color: $light-1;
-      font-weight: 600;
-      text-decoration: none;
-      padding-bottom: 2px;
-      opacity: 1;
-      &:hover {
-        opacity: 0.9;
-        text-shadow: 0px 0px 40px rgba($light-1, 0.7);
-        // border-bottom: 2px solid rgba($light-1, 0.9);
-        // transition: border-bottom ease-in-out 0.08s;
-      }
-    }
-  }
-  @media (min-width: $tablet) {
-    width: 50%;
-  }
-  @media (min-width: $small-screen) {
-    display: flex;
-    width: 40%;
-    height: inherit;
-    padding-top: 0;
-    flex-direction: row;
-    position: relative;
-    top: 0;
-    transform: none;
-    li {
-      opacity: 1; 
-    }
-  }
-  @media (min-width: $large-screen) {
-    width: 35%;
-  }
+.nav-bar{
+
 }
 
-.burger{
+// Animated hamburger icon form: https://codepen.io/designcouch/pen/Atyop
+
+.burger {
+  // background-color: $primary-light;
+  width: 60px;
+  height: 32px;
+  position: relative;
+  // margin: 50px auto;
+  transform: rotate(0deg);
+  transition: 500ms ease-in-out;
   cursor: pointer;
-  display: inline-block;
-  padding: 9px;
-  &:hover{
-    background-color: $primary-dark;
-  }
-  @media (min-width: $small-screen) { 
-    display: none;
-  }
-}
-
-.burger div{
-  width: 24px;
-  height: 2px;
-  background-color:$light-1;
-  margin: 6px;
-  transition: all 0.3s ease;
-}
-
-
-.nav-active {
-  transform: translateX(0%);
-  transition: transform 0.5s ease-in;
-}
-
-@keyframes navLinkFade {
-  from{
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to{
+  span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: $light-1;
+    border-radius: 9px;
     opacity: 1;
-    transform: translateX(0px);
+    left: 0;
+    transform: rotate(0deg);
+    transition: 250ms ease-in-out;
+    &:nth-child(1){
+      top: 0px;
+    }
+    &:nth-child(2), &:nth-child(3) {
+      top: 14px;
+    }
+    &:nth-child(4) {
+      top: 28px;
+    }
   }
 }
 
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
+.burger.open {
+  span{
+    &:nth-child(1) {
+      top: 14px;
+      width: 0%;
+      left: 50%;
+    }
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    &:nth-child(4) {
+      top: 14px;
+      width: 0%;
+      left: 50%;
+    }
+  }
 }
 
-.toggle .line2 {
-  opacity: 0;
-}
+// body{
+//   overflow-x: hidden;
+// }
 
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
+// nav {
+//   .container {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     min-height: 3.25rem;
+    
+//   }
+//   background-color: $primary;
+//   box-shadow: 0px 4px 20px rgba($primary, .1);
+// }
+
+// .logo {
+//   color: $light-1;
+//   position: relative;
+//   z-index: 1;
+//   h5 {
+//     padding: 0;
+//   }
+// }
+
+// .nav-links{
+//   position: absolute;
+//   right: 0px;
+//   height: 100vh;
+//   width: 100%;
+//   top: 0;
+//   padding-top: 2.9rem;
+//   background-color: $primary;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: space-evenly;
+//   transform: translateX(100%);
+//   li {
+//     list-style: none;
+//     opacity: 0;
+//     a{
+//       color: $light-1;
+//       font-weight: 600;
+//       text-decoration: none;
+//       padding-bottom: 2px;
+//       opacity: 1;
+//       &:hover {
+//         opacity: 0.9;
+//         text-shadow: 0px 0px 40px rgba($light-1, 0.7);
+//         // border-bottom: 2px solid rgba($light-1, 0.9);
+//         // transition: border-bottom ease-in-out 0.08s;
+//       }
+//     }
+//   }
+//   @media (min-width: $tablet) {
+//     width: 50%;
+//   }
+//   @media (min-width: $small-screen) {
+//     display: flex;
+//     width: 40%;
+//     height: inherit;
+//     padding-top: 0;
+//     flex-direction: row;
+//     position: relative;
+//     top: 0;
+//     transform: none;
+//     li {
+//       opacity: 1; 
+//     }
+//   }
+//   @media (min-width: $large-screen) {
+//     width: 35%;
+//   }
+// }
+
+// .burger{
+//   cursor: pointer;
+//   display: inline-block;
+//   padding: 9px;
+//   &:hover{
+//     background-color: $primary-dark;
+//   }
+//   @media (min-width: $small-screen) { 
+//     display: none;
+//   }
+// }
+
+// .burger div{
+//   width: 24px;
+//   height: 2px;
+//   background-color:$light-1;
+//   margin: 6px;
+//   transition: all 0.3s ease;
+// }
+
+
+// .nav-active {
+//   transform: translateX(0%);
+//   transition: transform 0.5s ease-in;
+// }
+
+// @keyframes navLinkFade {
+//   from{
+//     opacity: 0;
+//     transform: translateX(50px);
+//   }
+//   to{
+//     opacity: 1;
+//     transform: translateX(0px);
+//   }
+// }
+
+// .toggle .line1 {
+//   transform: rotate(-45deg) translate(-5px, 6px);
+// }
+
+// .toggle .line2 {
+//   opacity: 0;
+// }
+
+// .toggle .line3 {
+//   transform: rotate(45deg) translate(-5px, -6px);
+// }
 
 // == Front Page Header
 
