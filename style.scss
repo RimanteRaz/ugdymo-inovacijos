@@ -363,6 +363,7 @@ footer{
 nav {
   width: 100%;
   background-color: $primary;
+  // background-color: $dark;
 }
 
 .nav-container {
@@ -388,27 +389,97 @@ nav {
 }
 
 .nav-bar{
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary;
+  // background-color: $dark;
+  width: 100%;
+  height: 100%;
+  padding: 0 3vw;
+  // Animation:
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  @media (min-width: $small-screen){
+    padding: 0 8vw;
+  }
+}
 
+.nav-bar.open{
+  transform: scale(1,1);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  li {
+    list-style: none;
+    padding: 2rem 0;
+    a{
+      color: $light-1;
+      text-decoration: none;
+      border-radius: 45px;
+      padding: 0.5em 2em;
+      transition: background-color 250ms ease;
+      &:hover {
+        background-color: $primary-dark;
+        // color: $primary-light;
+      }
+    }
+  }
+}
+
+.primary-menu, .secondary-menu {
+  li {
+    a {
+      opacity: 0;
+      transition: opacity 150ms ease-in-out;
+    }
+  }
+}
+
+.primary-menu.open, 
+.secondary-menu.open {
+  li {
+    a {
+      opacity: 1;
+      transition: opacity 250ms ease-in-out 250ms;
+    }
+  }
+}
+
+.nav-cta {
+  margin: 1rem 0;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-cta.open {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
 }
 
 // Animated hamburger icon form: https://codepen.io/designcouch/pen/Atyop
 
 .burger {
-  // background-color: $primary-light;
-  width: 60px;
-  height: 32px;
+  width: 32px;
+  height: 20px;
   position: relative;
-  // margin: 50px auto;
   transform: rotate(0deg);
   transition: 500ms ease-in-out;
   cursor: pointer;
   span {
     display: block;
     position: absolute;
-    height: 5px;
+    height: 3px;
     width: 100%;
     background: $light-1;
-    border-radius: 9px;
+    border-radius: 3px;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
@@ -417,10 +488,10 @@ nav {
       top: 0px;
     }
     &:nth-child(2), &:nth-child(3) {
-      top: 14px;
+      top: 10px;
     }
     &:nth-child(4) {
-      top: 28px;
+      top: 20px;
     }
   }
 }
@@ -428,7 +499,7 @@ nav {
 .burger.open {
   span{
     &:nth-child(1) {
-      top: 14px;
+      top: 10px;
       width: 0%;
       left: 50%;
     }
@@ -439,7 +510,7 @@ nav {
       transform: rotate(-45deg);
     }
     &:nth-child(4) {
-      top: 14px;
+      top: 10px;
       width: 0%;
       left: 50%;
     }
