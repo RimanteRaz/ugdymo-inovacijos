@@ -1029,22 +1029,51 @@ nav {
     font-weight: 600;
   }
 
+  .author {
+    border-top: 1px solid $light-gray;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: $dark-gray;
+    @media (min-width: $tablet) {
+      padding: 1rem 2rem;
+    } 
+    h6, p{
+      padding: 0;
+    }
+  }
+
+  .date {
+    color: $dark-gray;
+    margin-bottom: 1.5rem;
+  }
+
   .meta-data{
-    @extend .row-2-col;
     margin-bottom: 1.5rem;
     color: $dark-gray;
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    padding: 1rem 1.25rem;
+    @media (min-width: $tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
     .author{
-      @media (min-width: $small-screen) {
-        flex: 70%;
+      @media (min-width: $tablet) {
+        order: 1;
+        flex-grow: 1;
       }
       p {
         padding-bottom: 0;
       }
     }
     .date{
-      @media (min-width: $small-screen) {
-        flex: 30%;
+      padding-bottom: 0.5em;
+      @media (min-width: $tablet) {
+        padding-bottom: 0;
+        order: 2;
         display: flex;
+        flex-basis: content;
         justify-content: flex-end;
       }
     }

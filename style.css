@@ -229,25 +229,25 @@ footer {
 }
 
 @media (min-width: 62em) {
-  .row-2-col, .article .meta-data {
+  .row-2-col {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media (min-width: 62em) {
-  .row-2-col .col-50, .article .meta-data .col-50 {
+  .row-2-col .col-50 {
     flex: 50%;
   }
 }
 @media (min-width: 62em) {
-  .row-2-col .col-70, .article .meta-data .col-70 {
+  .row-2-col .col-70 {
     flex: 65%;
     margin-right: 5%;
   }
 }
 @media (min-width: 62em) {
-  .row-2-col .col-30, .article .meta-data .col-30 {
+  .row-2-col .col-30 {
     flex: 30%;
   }
 }
@@ -837,22 +837,56 @@ nav {
   margin-bottom: 1rem;
   font-weight: 600;
 }
+.article .author {
+  border-top: 1px solid #e0e1e4;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #3b3b3b;
+}
+@media (min-width: 43.75em) {
+  .article .author {
+    padding: 1rem 2rem;
+  }
+}
+.article .author h6, .article .author p {
+  padding: 0;
+}
+.article .date {
+  color: #3b3b3b;
+  margin-bottom: 1.5rem;
+}
 .article .meta-data {
   margin-bottom: 1.5rem;
   color: #3b3b3b;
+  border-top: 1px solid #e0e1e4;
+  border-bottom: 1px solid #e0e1e4;
+  padding: 1rem 1.25rem;
 }
-@media (min-width: 62em) {
+@media (min-width: 43.75em) {
+  .article .meta-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 43.75em) {
   .article .meta-data .author {
-    flex: 70%;
+    order: 1;
+    flex-grow: 1;
   }
 }
 .article .meta-data .author p {
   padding-bottom: 0;
 }
-@media (min-width: 62em) {
+.article .meta-data .date {
+  padding-bottom: 0.5em;
+}
+@media (min-width: 43.75em) {
   .article .meta-data .date {
-    flex: 30%;
+    padding-bottom: 0;
+    order: 2;
     display: flex;
+    flex-basis: content;
     justify-content: flex-end;
   }
 }
@@ -985,14 +1019,14 @@ nav {
   margin-top: 0.25rem;
 }
 @media (min-width: 43.75em) {
-  .add-comment form .row-2-col, .add-comment form .article .meta-data, .article .add-comment form .meta-data {
+  .add-comment form .row-2-col {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media (min-width: 43.75em) {
-  .add-comment form .row-2-col .comment-col-50, .add-comment form .article .meta-data .comment-col-50, .article .add-comment form .meta-data .comment-col-50 {
+  .add-comment form .row-2-col .comment-col-50 {
     width: 48%;
   }
 }
