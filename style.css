@@ -201,6 +201,8 @@ body {
 
 footer {
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .container {
@@ -688,16 +690,22 @@ nav {
   }
 }
 
+.submit-section {
+  padding-top: 3rem;
+  position: relative;
+}
+.submit-section .text-card {
+  z-index: 1;
+  position: relative;
+  padding: 1.5rem 3rem 2rem 2.5rem;
+}
 @media (min-width: 43.75em) {
-  .submit-section {
+  .submit-section .text-card {
     max-width: 60ch;
   }
 }
-.submit-section h4 {
+.submit-section .text-card h4 {
   font-weight: 600;
-}
-.submit-section .text-card {
-  padding: 1.5rem 3rem 2rem 2.5rem;
 }
 .submit-section .text-card p {
   padding-bottom: 0;
@@ -706,6 +714,21 @@ nav {
   display: flex;
   justify-content: center;
   padding-top: 1.25rem;
+}
+
+.submit-section-img {
+  display: none;
+}
+@media (min-width: 43.75em) {
+  .submit-section-img {
+    display: block;
+    height: 400px;
+    width: auto;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: -30ch;
+  }
 }
 
 .footer {
