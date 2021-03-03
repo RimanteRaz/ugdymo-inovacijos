@@ -1,4 +1,4 @@
-// NAVBAR:
+// Navbar Toggle:
 
 const navToggle = () => {
   const burger = document.querySelector(".burger");
@@ -17,14 +17,3 @@ const navToggle = () => {
 };
 
 navToggle();
-
-// Masonry Layout for archive pages
-
-let magicGrid = new MagicGrid({
-  container: ".archive-grid",
-  static: true,
-  animate: true,
-  gutter: 40,
-});
-
-magicGrid.listen();
