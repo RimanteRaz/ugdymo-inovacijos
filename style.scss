@@ -1025,27 +1025,24 @@ nav {
 
   .title {
     padding-bottom: 0;
-    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 2rem;
+    padding: 0;
     font-weight: 600;
   }
 
-  .meta-data{
-    @extend .row-2-col;
-    margin-bottom: 1.5rem;
+  .date {
+    display: flex;
+    justify-content: flex-end;
     color: $dark-gray;
-    .author{
-      @media (min-width: $small-screen) {
-        flex: 70%;
-      }
-      p {
-        padding-bottom: 0;
-      }
-    }
-    .date{
-      @media (min-width: $small-screen) {
-        flex: 30%;
-        display: flex;
-        justify-content: flex-end;
+    margin-top: 2rem;
+    span {
+      img {
+        position: relative;
+        top: 2px;
+        height: 14px;
+        width: auto;
+        padding-right: 2px;
       }
     }
   }
@@ -1056,7 +1053,7 @@ nav {
       overflow: hidden;
       border-radius: 10px;
       @media(min-width: $tablet){
-        margin: 0 -2rem;
+        // margin: 0 -2rem;
         border-radius: 20px;
       }
       img{
@@ -1109,6 +1106,39 @@ nav {
   @media(min-width: $small-screen){
     display: block;
   }
+}
+
+.article-sidebar, .article-sidebar-mobile {
+  .author {
+    padding-top: 1.85rem;
+    padding-right: 1rem;
+    padding-bottom: 0.25rem;
+    h5 {
+      padding-top: 0;
+    }
+    .author-data {
+      padding-bottom: 0.5rem;
+      p {
+        padding: 0;
+      }
+    }
+    .contact-author {
+      p {
+        padding: 0;
+      }
+    }
+  }
+  
+}
+
+.article-sidebar-mobile {
+  .author {
+    padding-bottom: 0.5rem;
+    p {
+      padding-bottom: 0.05em;
+    }
+  }
+  
 }
 
 // == COMMENTS

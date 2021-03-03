@@ -229,25 +229,25 @@ footer {
 }
 
 @media (min-width: 62em) {
-  .row-2-col, .article .meta-data {
+  .row-2-col {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media (min-width: 62em) {
-  .row-2-col .col-50, .article .meta-data .col-50 {
+  .row-2-col .col-50 {
     flex: 50%;
   }
 }
 @media (min-width: 62em) {
-  .row-2-col .col-70, .article .meta-data .col-70 {
+  .row-2-col .col-70 {
     flex: 65%;
     margin-right: 5%;
   }
 }
 @media (min-width: 62em) {
-  .row-2-col .col-30, .article .meta-data .col-30 {
+  .row-2-col .col-30 {
     flex: 30%;
   }
 }
@@ -834,27 +834,23 @@ nav {
 }
 .article .title {
   padding-bottom: 0;
-  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 2rem;
+  padding: 0;
   font-weight: 600;
 }
-.article .meta-data {
-  margin-bottom: 1.5rem;
+.article .date {
+  display: flex;
+  justify-content: flex-end;
   color: #3b3b3b;
+  margin-top: 2rem;
 }
-@media (min-width: 62em) {
-  .article .meta-data .author {
-    flex: 70%;
-  }
-}
-.article .meta-data .author p {
-  padding-bottom: 0;
-}
-@media (min-width: 62em) {
-  .article .meta-data .date {
-    flex: 30%;
-    display: flex;
-    justify-content: flex-end;
-  }
+.article .date span img {
+  position: relative;
+  top: 2px;
+  height: 14px;
+  width: auto;
+  padding-right: 2px;
 }
 .article .featured-img {
   margin-bottom: 2rem;
@@ -865,7 +861,6 @@ nav {
 }
 @media (min-width: 43.75em) {
   .article .featured-img div {
-    margin: 0 -2rem;
     border-radius: 20px;
   }
 }
@@ -907,6 +902,31 @@ nav {
   .article-sidebar {
     display: block;
   }
+}
+
+.article-sidebar .author, .article-sidebar-mobile .author {
+  padding-top: 1.85rem;
+  padding-right: 1rem;
+  padding-bottom: 0.25rem;
+}
+.article-sidebar .author h5, .article-sidebar-mobile .author h5 {
+  padding-top: 0;
+}
+.article-sidebar .author .author-data, .article-sidebar-mobile .author .author-data {
+  padding-bottom: 0.5rem;
+}
+.article-sidebar .author .author-data p, .article-sidebar-mobile .author .author-data p {
+  padding: 0;
+}
+.article-sidebar .author .contact-author p, .article-sidebar-mobile .author .contact-author p {
+  padding: 0;
+}
+
+.article-sidebar-mobile .author {
+  padding-bottom: 0.5rem;
+}
+.article-sidebar-mobile .author p {
+  padding-bottom: 0.05em;
 }
 
 .comment {
@@ -985,14 +1005,14 @@ nav {
   margin-top: 0.25rem;
 }
 @media (min-width: 43.75em) {
-  .add-comment form .row-2-col, .add-comment form .article .meta-data, .article .add-comment form .meta-data {
+  .add-comment form .row-2-col {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media (min-width: 43.75em) {
-  .add-comment form .row-2-col .comment-col-50, .add-comment form .article .meta-data .comment-col-50, .article .add-comment form .meta-data .comment-col-50 {
+  .add-comment form .row-2-col .comment-col-50 {
     width: 48%;
   }
 }
