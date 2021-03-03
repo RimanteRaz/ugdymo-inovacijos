@@ -1025,13 +1025,26 @@ nav {
 
   .title {
     padding-bottom: 0;
-    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 2rem;
+    padding: 0;
     font-weight: 600;
   }
 
   .date {
+    display: flex;
+    justify-content: flex-end;
     color: $dark-gray;
-    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    span {
+      img {
+        position: relative;
+        top: 2px;
+        height: 14px;
+        width: auto;
+        padding-right: 2px;
+      }
+    }
   }
 
   .featured-img{
@@ -1040,7 +1053,7 @@ nav {
       overflow: hidden;
       border-radius: 10px;
       @media(min-width: $tablet){
-        margin: 0 -2rem;
+        // margin: 0 -2rem;
         border-radius: 20px;
       }
       img{
@@ -1095,12 +1108,24 @@ nav {
   }
 }
 
-.article-sidebar {
+.article-sidebar, .article-sidebar-mobile {
   .author {
-    padding-bottom: 0.5rem;
+    padding-top: 1.85rem;
     padding-right: 1rem;
-    p {
-      padding-bottom: 0.05em;
+    padding-bottom: 0.25rem;
+    h5 {
+      padding-top: 0;
+    }
+    .author-data {
+      padding-bottom: 0.5rem;
+      p {
+        padding: 0;
+      }
+    }
+    .contact-author {
+      p {
+        padding: 0;
+      }
     }
   }
   

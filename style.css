@@ -834,12 +834,23 @@ nav {
 }
 .article .title {
   padding-bottom: 0;
-  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 2rem;
+  padding: 0;
   font-weight: 600;
 }
 .article .date {
+  display: flex;
+  justify-content: flex-end;
   color: #3b3b3b;
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+.article .date span img {
+  position: relative;
+  top: 2px;
+  height: 14px;
+  width: auto;
+  padding-right: 2px;
 }
 .article .featured-img {
   margin-bottom: 2rem;
@@ -850,7 +861,6 @@ nav {
 }
 @media (min-width: 43.75em) {
   .article .featured-img div {
-    margin: 0 -2rem;
     border-radius: 20px;
   }
 }
@@ -894,12 +904,22 @@ nav {
   }
 }
 
-.article-sidebar .author {
-  padding-bottom: 0.5rem;
+.article-sidebar .author, .article-sidebar-mobile .author {
+  padding-top: 1.85rem;
   padding-right: 1rem;
+  padding-bottom: 0.25rem;
 }
-.article-sidebar .author p {
-  padding-bottom: 0.05em;
+.article-sidebar .author h5, .article-sidebar-mobile .author h5 {
+  padding-top: 0;
+}
+.article-sidebar .author .author-data, .article-sidebar-mobile .author .author-data {
+  padding-bottom: 0.5rem;
+}
+.article-sidebar .author .author-data p, .article-sidebar-mobile .author .author-data p {
+  padding: 0;
+}
+.article-sidebar .author .contact-author p, .article-sidebar-mobile .author .contact-author p {
+  padding: 0;
 }
 
 .article-sidebar-mobile .author {
