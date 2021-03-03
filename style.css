@@ -163,14 +163,16 @@ a:hover {
   color: #141414;
 }
 
-input, textarea {
+input,
+textarea {
   display: block;
   padding: 0.5rem;
   border: 1px solid #e0e1e4;
   border-radius: 5px;
   color: #3b3b3b;
 }
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: 0;
   box-shadow: 0 0 0 2px #00829f;
 }
@@ -182,7 +184,8 @@ input:focus, textarea:focus {
   background-color: white;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -431,7 +434,8 @@ nav {
   }
 }
 
-.primary-menu li a, .secondary-menu li a {
+.primary-menu li a,
+.secondary-menu li a {
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
@@ -904,21 +908,26 @@ nav {
   }
 }
 
-.article-sidebar .author, .article-sidebar-mobile .author {
+.article-sidebar .author,
+.article-sidebar-mobile .author {
   padding-top: 1.85rem;
   padding-right: 1rem;
   padding-bottom: 0.25rem;
 }
-.article-sidebar .author h5, .article-sidebar-mobile .author h5 {
+.article-sidebar .author h5,
+.article-sidebar-mobile .author h5 {
   padding-top: 0;
 }
-.article-sidebar .author .author-data, .article-sidebar-mobile .author .author-data {
+.article-sidebar .author .author-data,
+.article-sidebar-mobile .author .author-data {
   padding-bottom: 0.5rem;
 }
-.article-sidebar .author .author-data p, .article-sidebar-mobile .author .author-data p {
+.article-sidebar .author .author-data p,
+.article-sidebar-mobile .author .author-data p {
   padding: 0;
 }
-.article-sidebar .author .contact-author p, .article-sidebar-mobile .author .contact-author p {
+.article-sidebar .author .contact-author p,
+.article-sidebar-mobile .author .contact-author p {
   padding: 0;
 }
 
@@ -1016,7 +1025,8 @@ nav {
     width: 48%;
   }
 }
-.add-comment form input, .add-comment form textarea {
+.add-comment form input,
+.add-comment form textarea {
   width: 100%;
   margin-top: 0.25rem;
   margin-bottom: 0.8rem;

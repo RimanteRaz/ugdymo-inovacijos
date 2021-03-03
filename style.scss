@@ -1,5 +1,5 @@
 // ==IMPORTS
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 
 // ==FUNCTIONS
 
@@ -43,9 +43,9 @@ $col-gap: 2rem;
 .dark-bg {
   background-color: $dark;
   color: $light-1;
-  
-  a{
-    color:$light-1;
+
+  a {
+    color: $light-1;
     text-decoration-color: rgba($light-1, 0.5);
     &:hover {
       opacity: 0.8;
@@ -64,7 +64,7 @@ $col-gap: 2rem;
 // == TYPOGRAPHY
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -154,11 +154,9 @@ a {
   }
 }
 
-
-
 .category {
   display: inline-block;
-  background-color: rgba($primary, .05);
+  background-color: rgba($primary, 0.05);
   color: $primary;
   border: 1px solid $primary;
   border-radius: 50px;
@@ -173,22 +171,23 @@ a {
 .tag {
   @extend .text-small;
   display: inline-block;
-  background-color: rgba($dark, .05);
+  background-color: rgba($dark, 0.05);
   color: rgba($dark, 0.8);
   border: 1px solid $light-gray;
   border-radius: 50px;
   padding: 0.2em 1em;
   text-decoration: none;
   font-weight: 400;
-  &:hover{
-    background-color: rgba($dark, .15);
+  &:hover {
+    background-color: rgba($dark, 0.15);
     color: rgba($dark, 1);
   }
 }
 
 // == FORM STYLES
 
-input, textarea {
+input,
+textarea {
   display: block;
   padding: 0.5rem;
   border: 1px solid $light-gray;
@@ -202,16 +201,16 @@ input, textarea {
 
 // == ELEMENTS
 
-.card{
+.card {
   overflow: hidden;
   border-radius: 20px;
   border: 1px solid $light-gray;
   background-color: white;
 }
 
-
 // == LAYOUT
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -221,32 +220,32 @@ body {
   background-color: $light-1;
 }
 
-.content{
+.content {
   flex: 1 0 auto;
 }
 
-footer{
+footer {
   flex-shrink: 0;
 }
 
-.container{
+.container {
   margin: 0 3vw;
-  @media (min-width: $small-screen){
+  @media (min-width: $small-screen) {
     margin: 0 8vw;
   }
-  @media (min-width: $large-screen){
+  @media (min-width: $large-screen) {
     max-width: 75em;
     margin: 0 auto;
   }
 }
 
-.front-page-section{
+.front-page-section {
   padding: 5rem 0;
 }
 
-.section{
+.section {
   padding: 2rem 0;
-  @media(min-width: $small-screen){
+  @media (min-width: $small-screen) {
     padding: 4rem 0;
   }
 }
@@ -258,22 +257,21 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
   }
 
-  .col-50{
+  .col-50 {
     @media (min-width: $small-screen) {
       flex: 50%;
     }
   }
-  
-  .col-70{
+
+  .col-70 {
     @media (min-width: $small-screen) {
       flex: 65%;
       margin-right: 5%;
     }
   }
-  .col-30{
+  .col-30 {
     @media (min-width: $small-screen) {
       flex: 30%;
     }
@@ -290,13 +288,12 @@ footer{
     display: flex;
     flex-wrap: wrap;
     &:after {
-      content: '';
+      content: "";
       display: block;
       -ms-flex: 1 1 auto;
       flex: 1 1 auto;
     }
   }
-
 }
 
 .grid-cell {
@@ -335,7 +332,7 @@ footer{
     width: $width;
   }
 
-  .grid-cell{
+  .grid-cell {
     margin-right: $col-gap;
     width: $width;
     &:nth-of-type(3n) {
@@ -353,7 +350,7 @@ footer{
     // When there is only one item in the last row
     &:nth-of-type(3n-2):last-of-type {
       margin-right: calc(33% + #{$col-gap * 2});
-    }    
+    }
   }
 }
 
@@ -370,10 +367,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 3vw;
-  @media (min-width: $small-screen){
+  @media (min-width: $small-screen) {
     margin: 0 8vw;
   }
-  @media (min-width: $large-screen){
+  @media (min-width: $large-screen) {
     max-width: 75em;
     margin: 0 auto;
   }
@@ -382,7 +379,7 @@ nav {
 .logo {
   color: $light-1;
   z-index: 1;
-  h6{
+  h6 {
     padding: 0;
   }
   @media (min-width: $tablet) {
@@ -390,7 +387,7 @@ nav {
   }
 }
 
-.nav-bar{
+.nav-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -402,9 +399,9 @@ nav {
   background-color: $dark;
   width: 100%;
   height: 100vh;
-  
+
   // Animation:
-  transform: scale(1,0);
+  transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
   @media (min-width: $tablet) {
@@ -412,11 +409,11 @@ nav {
   }
 }
 
-.nav-bar.open{
-  transform: scale(1,1);
+.nav-bar.open {
+  transform: scale(1, 1);
 }
 
-.dt-nav-bar{
+.dt-nav-bar {
   display: none;
   @media (min-width: $tablet) {
     display: flex;
@@ -433,7 +430,7 @@ nav {
   li {
     list-style: none;
     padding: 1rem 0;
-    a{
+    a {
       color: $light-1;
       text-decoration: none;
       border-radius: 45px;
@@ -446,7 +443,7 @@ nav {
   }
 }
 
-.dt-nav-links ul{
+.dt-nav-links ul {
   display: none;
   @media (min-width: $tablet) {
     display: flex;
@@ -466,7 +463,8 @@ nav {
   }
 }
 
-.primary-menu, .secondary-menu {
+.primary-menu,
+.secondary-menu {
   li {
     a {
       opacity: 0;
@@ -475,7 +473,7 @@ nav {
   }
 }
 
-.primary-menu.open, 
+.primary-menu.open,
 .secondary-menu.open {
   li {
     a {
@@ -488,7 +486,7 @@ nav {
 .dt-primary-menu {
   margin-right: auto;
   ul {
-    li{ 
+    li {
       padding-right: 1.2rem;
     }
   }
@@ -531,7 +529,7 @@ nav {
       }
       span {
         position: absolute;
-        transform: scale(0,1);
+        transform: scale(0, 1);
         opacity: 0;
         transition: opacity 150ms ease-in-out 200ms;
         transform-origin: left;
@@ -545,7 +543,7 @@ nav {
         }
         span {
           position: relative;
-          transform: scale(1,1);
+          transform: scale(1, 1);
           opacity: 1;
           margin-right: 0.5em;
         }
@@ -562,7 +560,7 @@ nav {
       }
       span {
         position: relative;
-        transform: scale(1,1);
+        transform: scale(1, 1);
         opacity: 1;
         margin-right: 0.5em;
       }
@@ -590,10 +588,11 @@ nav {
     left: 0;
     transform: rotate(0deg);
     transition: 250ms ease-in-out;
-    &:nth-child(1){
+    &:nth-child(1) {
       top: 0px;
     }
-    &:nth-child(2), &:nth-child(3) {
+    &:nth-child(2),
+    &:nth-child(3) {
       top: 10px;
     }
     &:nth-child(4) {
@@ -606,7 +605,7 @@ nav {
 }
 
 .burger.open {
-  span{
+  span {
     &:nth-child(1) {
       top: 10px;
       width: 0%;
@@ -629,13 +628,13 @@ nav {
 // == Front Page Header
 
 .front-page {
-  @media (min-width: $tablet){
+  @media (min-width: $tablet) {
     padding: 3rem 0 3rem 0;
   }
-  @media(min-width: $small-screen){
+  @media (min-width: $small-screen) {
     padding: 4rem 0 4rem 0;
   }
-  @media(min-width: $large-screen) {
+  @media (min-width: $large-screen) {
     padding: 6rem 0 6rem 0;
   }
 }
@@ -683,11 +682,11 @@ nav {
     padding: 1.5rem 1rem 1.5rem 1rem;
     .title {
       padding: 1rem 0rem 0.5rem 0rem;
-      a{
+      a {
         color: $dark;
         text-decoration: none;
         font-weight: 600;
-        &:hover{
+        &:hover {
           color: $primary;
         }
       }
@@ -703,7 +702,7 @@ nav {
       background-color: rgba($light-gray, 0.5);
       color: rgba($dark, 0.9);
     }
-    div{
+    div {
       display: flex;
       justify-content: center;
     }
@@ -714,7 +713,7 @@ nav {
   margin-bottom: $col-gap;
   padding-right: 0.8rem;
   .read-all-1 {
-    display: none; 
+    display: none;
     @media (min-width: $small-screen) {
       display: flex;
       justify-content: flex-end;
@@ -734,17 +733,17 @@ nav {
 
 // == SUBMIT YOUR INNOVATION
 
-.submit-section{
-  @media (min-width: $tablet){
+.submit-section {
+  @media (min-width: $tablet) {
     max-width: 60ch;
   }
   h4 {
     font-weight: 600;
   }
-  .text-card{
+  .text-card {
     @extend .card;
     padding: 1.5rem 3rem 2rem 2.5rem;
-    p{
+    p {
       padding-bottom: 0;
     }
   }
@@ -759,7 +758,7 @@ nav {
 
 .footer {
   padding-bottom: 8rem;
-  @media(min-width: $small-screen) {
+  @media (min-width: $small-screen) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -780,7 +779,7 @@ nav {
 
 .subscribeForm {
   padding-top: 0.5rem;
-  input[type=email]{
+  input[type="email"] {
     display: block;
     width: 100%;
     padding: 0.5rem;
@@ -804,19 +803,17 @@ nav {
         vertical-align: middle;
       }
     }
-    input{
+    input {
       vertical-align: middle;
     }
   }
-  .btn-div{
+  .btn-div {
     display: flex;
     justify-content: flex-end;
     padding-top: 2rem;
-    padding-bottom: 2rem; 
+    padding-bottom: 2rem;
   }
-
 }
-
 
 // == ARCHIVE
 
@@ -844,12 +841,12 @@ nav {
         color: $dark;
         text-decoration: none;
         font-weight: 600;
-      &:hover{
-        color: $primary;
+        &:hover {
+          color: $primary;
         }
       }
     }
-    p{
+    p {
       padding: 0.4rem 0;
     }
   }
@@ -863,7 +860,7 @@ nav {
       background-color: rgba($light-gray, 0.5);
       color: rgba($dark, 0.9);
     }
-    div{
+    div {
       display: flex;
       justify-content: center;
     }
@@ -876,17 +873,17 @@ nav {
   @extend .card;
   margin-bottom: 2rem;
   padding: 1rem;
-  @media (min-width: $tablet){
+  @media (min-width: $tablet) {
     padding: 1rem 3rem 2rem 3rem;
-    .post-text{
+    .post-text {
       padding-right: 1rem;
-    } 
+    }
   }
-  @media (min-width: $small-screen){
+  @media (min-width: $small-screen) {
     padding: 1rem 4rem 3rem 4rem;
-    .post-text{
+    .post-text {
       padding-right: 1rem;
-    } 
+    }
   }
 
   .title {
@@ -913,22 +910,22 @@ nav {
     }
   }
 
-  .featured-img{
+  .featured-img {
     margin-bottom: 2rem;
-    div{
+    div {
       overflow: hidden;
       border-radius: 10px;
-      @media(min-width: $tablet){
+      @media (min-width: $tablet) {
         // margin: 0 -2rem;
         border-radius: 20px;
       }
-      img{
+      img {
         display: block;
         max-width: 100%;
         height: auto;
       }
     }
-    figurecaption{
+    figurecaption {
       display: block;
       text-align: right;
       padding-top: 0.25em;
@@ -937,44 +934,43 @@ nav {
 
       // background-color: red;
     }
-
   }
-
 }
 
-.cat-and-tags{
+.cat-and-tags {
   @extend .card;
   padding: 1rem 1rem 1rem 1.5rem;
-  .cat-div{
-    .category{
+  .cat-div {
+    .category {
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
     }
   }
-  .tag-div{
+  .tag-div {
     .tag {
-      margin-right: 0.5rem; 
+      margin-right: 0.5rem;
       margin-bottom: 0.5rem;
     }
   }
 }
 
-.article-sidebar-mobile{
+.article-sidebar-mobile {
   @extend .cat-and-tags;
-  @media(min-width: $small-screen){
+  @media (min-width: $small-screen) {
     display: none;
   }
 }
 
 .article-sidebar {
   @extend .cat-and-tags;
-  display:none;
-  @media(min-width: $small-screen){
+  display: none;
+  @media (min-width: $small-screen) {
     display: block;
   }
 }
 
-.article-sidebar, .article-sidebar-mobile {
+.article-sidebar,
+.article-sidebar-mobile {
   .author {
     padding-top: 1.85rem;
     padding-right: 1rem;
@@ -994,7 +990,6 @@ nav {
       }
     }
   }
-  
 }
 
 .article-sidebar-mobile {
@@ -1004,12 +999,11 @@ nav {
       padding-bottom: 0.05em;
     }
   }
-  
 }
 
 // == COMMENTS
 
-.comment{
+.comment {
   @extend .card;
   margin-bottom: 2rem;
   padding: 1rem 1.2rem;
@@ -1019,16 +1013,16 @@ nav {
   @media (min-width: $small-screen) {
     padding: 2rem 4rem 1.4rem 2.5rem;
   }
-  .comment-head{
+  .comment-head {
     display: flex;
     flex-direction: row;
     padding-bottom: 1rem;
-    .avatar{
+    .avatar {
       width: 60px;
       height: 60px;
       overflow: hidden;
       border-radius: 30px;
-      img{
+      img {
         max-width: 100%;
         height: auto;
       }
@@ -1038,7 +1032,7 @@ nav {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      p{
+      p {
         padding: 0;
       }
       .text-small {
@@ -1047,22 +1041,22 @@ nav {
     }
   }
 
-  .comment-content{
+  .comment-content {
     padding-bottom: 1rem;
   }
 }
 
-.comment-reply{
+.comment-reply {
   padding-left: 5vw;
-  @media (min-width: $tablet){
+  @media (min-width: $tablet) {
     padding-left: 10vw;
   }
-  @media (min-width: $small-screen){
+  @media (min-width: $small-screen) {
     padding-left: 6vw;
   }
 }
 
-.add-comment{
+.add-comment {
   @extend .card;
   padding: 0 1rem 1.2rem 1rem;
   @media (min-width: $tablet) {
@@ -1073,7 +1067,7 @@ nav {
   }
   form {
     margin-top: 0.25rem;
-    .row-2-col{
+    .row-2-col {
       @media (min-width: $tablet) {
         display: flex;
         flex-direction: row;
@@ -1085,19 +1079,19 @@ nav {
         }
       }
     }
-    
-    input, textarea{
+
+    input,
+    textarea {
       width: 100%;
       margin-top: 0.25rem;
       margin-bottom: 0.8rem;
     }
-    .btn-div{
+    .btn-div {
       display: flex;
       justify-content: flex-end;
       margin-top: 1.2rem;
     }
   }
-  
 }
 
 // == SEARCH
@@ -1113,50 +1107,50 @@ nav {
     max-width: 90%;
     margin: 0 auto;
   }
-  
+
   form {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    label{
-      @media (min-width: $tablet){
+    label {
+      @media (min-width: $tablet) {
         display: block;
       }
     }
-    input{
+    input {
       margin-top: 0.5rem;
       margin-bottom: 1rem;
       width: 100%;
-      @media (min-width: $tablet){
+      @media (min-width: $tablet) {
         display: inline-block;
         width: 48%;
       }
     }
-    .btn-div{
+    .btn-div {
       display: flex;
       justify-content: flex-end;
-      @media (min-width: $tablet){
+      @media (min-width: $tablet) {
         display: inline-block;
         margin-left: 1rem;
       }
     }
   }
 
-  p{
+  p {
     padding: 0;
     max-width: 40ch;
   }
 
-  .select-cat-or-tag{
-    @media(min-width: $tablet){
+  .select-cat-or-tag {
+    @media (min-width: $tablet) {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
     .categories {
-      @media(min-width: $tablet){
+      @media (min-width: $tablet) {
         width: 48%;
       }
-      div{
+      div {
         .category {
           margin-right: 0.25rem;
           margin-bottom: 0.5rem;
@@ -1165,23 +1159,22 @@ nav {
     }
 
     .tags {
-      @media(min-width: $tablet){
+      @media (min-width: $tablet) {
         width: 48%;
       }
-      div{
+      div {
         .tag {
           margin-right: 0.25rem;
           margin-bottom: 0.5rem;
         }
       }
     }
-
   }
 }
 
 // == SINGLE PAGE
 
-.page-content{
+.page-content {
   @extend .card;
   padding: 0.5rem 1.2rem;
   @media (min-width: $tablet) {
