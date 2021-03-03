@@ -1029,54 +1029,9 @@ nav {
     font-weight: 600;
   }
 
-  .author {
-    border-top: 1px solid $light-gray;
-    padding: 1rem;
-    margin-top: 1rem;
-    color: $dark-gray;
-    @media (min-width: $tablet) {
-      padding: 1rem 2rem;
-    } 
-    h6, p{
-      padding: 0;
-    }
-  }
-
   .date {
     color: $dark-gray;
     margin-bottom: 1.5rem;
-  }
-
-  .meta-data{
-    margin-bottom: 1.5rem;
-    color: $dark-gray;
-    border-top: 1px solid $light-gray;
-    border-bottom: 1px solid $light-gray;
-    padding: 1rem 1.25rem;
-    @media (min-width: $tablet) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    .author{
-      @media (min-width: $tablet) {
-        order: 1;
-        flex-grow: 1;
-      }
-      p {
-        padding-bottom: 0;
-      }
-    }
-    .date{
-      padding-bottom: 0.5em;
-      @media (min-width: $tablet) {
-        padding-bottom: 0;
-        order: 2;
-        display: flex;
-        flex-basis: content;
-        justify-content: flex-end;
-      }
-    }
   }
 
   .featured-img{
@@ -1138,6 +1093,27 @@ nav {
   @media(min-width: $small-screen){
     display: block;
   }
+}
+
+.article-sidebar {
+  .author {
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    p {
+      padding-bottom: 0.05em;
+    }
+  }
+  
+}
+
+.article-sidebar-mobile {
+  .author {
+    padding-bottom: 0.5rem;
+    p {
+      padding-bottom: 0.05em;
+    }
+  }
+  
 }
 
 // == COMMENTS
