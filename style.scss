@@ -242,13 +242,6 @@ footer {
   }
 }
 
-.front-page-section {
-  padding: 5rem 0;
-  @media (min-width: $small-screen) {
-    padding: 5rem 0;
-  }
-}
-
 .section {
   padding: 2rem 0;
   @media (min-width: $small-screen) {
@@ -634,15 +627,15 @@ nav {
 // == Front Page Header
 
 .front-page-header {
-  padding: 2rem 0;
+  padding: 3rem 0 5rem 0;
   @media (min-width: $tablet) {
-    padding: 8rem 0;
+    padding: 8rem 0 6rem 0;
   }
   @media (min-width: $small-screen) {
-    padding: 9rem 0;
+    padding: 9rem 0 7rem 0;
   }
   @media (min-width: $large-screen) {
-    padding: 11rem 0;
+    padding: 11rem 0 9rem 0;
     // padding: 5rem 0;
   }
 }
@@ -670,7 +663,7 @@ nav {
 
 .front-page-header .right {
   display: flex;
-  align-items: flex-end;
+  // align-items: flex-end;
   justify-content: center;
   padding: 1rem 2rem 0 0;
   max-width: 60ch;
@@ -680,9 +673,10 @@ nav {
   }
   @media (min-width: $small-screen) {
     position: relative;
-    padding-bottom: 1rem;
-    align-items: center;
-    // justify-content: center;
+    padding-top: 190px;
+    // padding-bottom: 1rem;
+    align-items: flex-start;
+    justify-content: center;
   }
   @media (min-width: $large-screen) {
     align-items: flex-end;
@@ -732,7 +726,24 @@ nav {
   z-index: 1;
 }
 
-// == New Post
+.header-wave {
+  background-color: $light-2;
+}
+
+// == Featured Posts
+
+.featured-posts {
+  padding: 3rem 0 4rem 0;
+  @media (min-width: $tablet) {
+    padding: 4rem 0 5rem 0;
+  }
+  @media (min-width: $small-screen) {
+    padding-bottom: 7rem;
+  }
+  @media (min-width: $large-screen) {
+    padding-bottom: 9rem;
+  }
+}
 
 .new-post {
   @extend .card;
@@ -791,7 +802,7 @@ nav {
 }
 
 .read-all-2 {
-  padding-top: $col-gap;
+  padding-top: calc(2 *#{$col-gap});
   display: flex;
   justify-content: center;
   @media (min-width: $small-screen) {
@@ -802,8 +813,18 @@ nav {
 // == SUBMIT YOUR INNOVATION
 
 .submit-section {
-  padding-top: 3rem;
+  margin: 4rem 0;
   position: relative;
+  @media (min-width: $tablet) {
+    padding-top: 3rem;
+    margin: 5rem 0;
+  }
+  @media (min-width: $small-screen) {
+    margin-top: 7rem;
+  }
+  @media (min-width: $large-screen) {
+    margin-top: 8rem;
+  }
   // width: 100%;
 
   .text-card {
