@@ -100,9 +100,8 @@ a:hover {
 }
 a:focus {
   outline: none;
-  border: 2px dashed #52b2d0;
+  border: 2px solid #52b2d0;
 }
-
 .btn, .btn-light, .btn-secondary, .btn-primary {
   display: inline-block;
   box-sizing: border-box;
@@ -435,9 +434,15 @@ nav {
     list-style: none;
   }
   .dt-nav-links ul li a {
+    display: flex;
+    align-items: center;
     color: #f5f5f5;
     text-decoration: none;
     transition: color 250ms ease;
+  }
+  .dt-nav-links ul li a .material-icons-outlined {
+    font-size: 1.2rem;
+    padding-right: 0.1rem;
   }
   .dt-nav-links ul li a:hover {
     color: #52b2d0;
@@ -628,6 +633,9 @@ nav {
 .front-page-header .left h1 {
   padding: 0 0 0.5em 0;
 }
+.front-page-header .left p {
+  padding: 0;
+}
 
 .front-page-header .right {
   display: flex;
@@ -652,6 +660,8 @@ nav {
 @media (min-width: 87em) {
   .front-page-header .right {
     align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 0.25rem 4rem;
   }
 }
 
@@ -753,6 +763,9 @@ nav {
 }
 .new-post .info-div .title a:hover {
   color: #00576b;
+}
+.new-post .info-div .meta {
+  color: #3b3b3b;
 }
 .new-post .read-more {
   color: #141414;
@@ -983,23 +996,20 @@ nav {
 }
 .article .title {
   padding-bottom: 0;
-  margin-top: 0.25rem;
-  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
   padding: 0;
   font-weight: 600;
 }
 .article .date {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
   color: #3b3b3b;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-.article .date span img {
-  position: relative;
-  top: 2px;
-  height: 14px;
-  width: auto;
-  padding-right: 2px;
+.article .date .material-icons-outlined {
+  font-size: 0.9rem;
+  padding-right: 0.2rem;
 }
 .article .featured-img {
   margin-bottom: 2rem;
@@ -1059,8 +1069,8 @@ nav {
   padding-right: 1rem;
   padding-bottom: 0.25rem;
 }
-.article-sidebar .author h5,
-.article-sidebar-mobile .author h5 {
+.article-sidebar .author h6,
+.article-sidebar-mobile .author h6 {
   padding-top: 0;
 }
 .article-sidebar .author .author-data,
