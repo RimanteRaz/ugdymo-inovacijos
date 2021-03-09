@@ -19,8 +19,7 @@
 
 // ===Colors
 $primary: #00576b;
-$primary-light: #00829f;
-$primary-light-2: #52b2d0;
+$primary-light: #52b2d0;
 $primary-dark: #002e40;
 $dark: #141414;
 $dark-gray: #3b3b3b;
@@ -45,14 +44,6 @@ $col-gap: 2rem;
 .dark-bg {
   background-color: $dark;
   color: $light-1;
-
-  a {
-    color: $light-1;
-    text-decoration-color: rgba($light-1, 0.5);
-    &:hover {
-      opacity: 0.8;
-    }
-  }
 }
 
 .light-1-bg {
@@ -118,9 +109,7 @@ a {
   }
   &:focus {
     outline: none;
-    border: 2px solid $primary-light-2;
-  }
-  &:active {
+    background-color: rgba($primary-light, 0.4);
   }
 }
 
@@ -136,7 +125,7 @@ a {
   cursor: pointer;
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 3px $primary-light-2;
+    box-shadow: 0 0 0 3px $primary-light;
   }
 }
 
@@ -148,6 +137,9 @@ a {
     background-color: $primary-dark;
     color: $light-1;
   }
+  &:focus {
+    background-color: $primary;
+  }
 }
 
 .btn-secondary {
@@ -156,6 +148,9 @@ a {
   color: $dark;
   &:hover {
     background-color: $light-gray;
+  }
+  &:focus {
+    background-color: rgba($light-gray, 0.8);
   }
 }
 
@@ -166,6 +161,9 @@ a {
   &:hover {
     background-color: $gray;
     color: $dark;
+  }
+  &:focus {
+    background-color: $light-1;
   }
 }
 
@@ -381,8 +379,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 3vw;
+  @media (min-width: $tablet) {
+    margin: 0 2.75vw;
+  }
   @media (min-width: $small-screen) {
-    margin: 0 8vw;
+    margin: 0 7.75vw;
   }
   @media (min-width: $large-screen) {
     max-width: 75em;
@@ -392,7 +393,7 @@ nav {
 
 .logo {
   color: $light-1;
-  z-index: 1;
+  z-index: 1000;
   h6 {
     padding: 0;
   }
@@ -406,7 +407,7 @@ nav {
   top: 0;
   left: 0;
   padding-top: 4rem;
-  z-index: -1;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -445,13 +446,21 @@ nav {
     list-style: none;
     padding: 1rem 0;
     a {
+      display: flex;
+      align-items: center;
       color: $light-1;
       text-decoration: none;
-      border-radius: 45px;
       padding: 0.5em 2em;
       transition: color 250ms ease;
+      .material-icons-outlined {
+        font-size: 1.4rem;
+        padding-right: 0.1rem;
+      }
       &:hover {
-        color: $primary-light-2;
+        color: $primary-light;
+      }
+      &:focus {
+        border-radius: 5px;
       }
     }
   }
@@ -471,12 +480,16 @@ nav {
         color: $light-1;
         text-decoration: none;
         transition: color 250ms ease;
+        padding: 0.25vw 0.25vw;
         .material-icons-outlined {
           font-size: 1.2rem;
           padding-right: 0.1rem;
         }
         &:hover {
-          color: $primary-light-2;
+          color: $primary-light;
+        }
+        &:focus {
+          border-radius: 5px;
         }
       }
     }
@@ -507,7 +520,7 @@ nav {
   margin-right: auto;
   ul {
     li {
-      padding-right: 1.2rem;
+      padding-right: 0.75rem;
     }
   }
 }
@@ -515,7 +528,7 @@ nav {
 .dt-secondary-menu {
   ul {
     li {
-      padding-left: 1.2rem;
+      padding-left: 0.75rem;
     }
   }
 }
@@ -597,6 +610,7 @@ nav {
   transform: rotate(0deg);
   transition: 500ms ease-in-out;
   cursor: pointer;
+  z-index: 1000;
   span {
     display: block;
     position: absolute;
@@ -899,6 +913,16 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+  a {
+    color: $light-1;
+    text-decoration-color: rgba($light-1, 0.5);
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      border-radius: 5px;
+    }
   }
   .left {
     max-width: 45ch;
