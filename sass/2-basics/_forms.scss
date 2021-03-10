@@ -1,0 +1,12 @@
+input,
+textarea {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+  color: $dark-gray;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px $primary-light;
+  }
+}

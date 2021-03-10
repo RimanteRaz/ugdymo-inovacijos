@@ -1,0 +1,68 @@
+.footer {
+  padding-bottom: 8rem;
+  @media (min-width: $small-screen) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  a {
+    color: $light-1;
+    text-decoration-color: rgba($light-1, 0.5);
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      border-radius: 5px;
+    }
+  }
+  .left {
+    max-width: 45ch;
+    padding-bottom: 2rem;
+    h5 {
+      padding-top: 0;
+    }
+  }
+  .right {
+    max-width: 50ch;
+  }
+}
+
+// == FORMS
+
+.subscribeForm {
+  padding-top: 0.5rem;
+  input[type="email"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    color: $dark-gray;
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 2px $primary-light;
+    }
+  }
+  .checkbox {
+    padding-top: 0.5rem;
+    label {
+      display: block;
+      padding-right: 10px;
+      padding-left: 22px;
+      text-indent: -22px;
+      span {
+        vertical-align: middle;
+      }
+    }
+    input {
+      vertical-align: middle;
+    }
+  }
+  .btn-div {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
