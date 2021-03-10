@@ -1,24 +1,24 @@
 /* 1 - HELPERS */
-@import "../sass/1-helpers/variables";
-@import "../sass/1-helpers/functions";
+@import "../scss/1-helpers/functions";
+@import "../scss/1-helpers/variables";
 
 /* 2 - BASICS */
-@import "../sass/2-basics/buttons-links";
-@import "../sass/2-basics/forms";
-@import "../sass/2-basics/modules";
-@import "../sass/2-basics/typography";
+@import "../scss/2-basics/buttons-links";
+@import "../scss/2-basics/forms";
+@import "../scss/2-basics/modules";
+@import "../scss/2-basics/typography";
 
 /* 3 - LAYOUT */
-@import "../sass/3-layout/footer";
-@import "../sass/3-layout/navigation";
-@import "../sass/3-layout/structure";
+@import "../scss/3-layout/footer";
+@import "../scss/3-layout/navigation";
+@import "../scss/3-layout/structure";
 
 /* 4 - Components */
-@import "../sass/4-components/archive";
-@import "../sass/4-components/comments";
-@import "../sass/4-components/front-page-featured-posts";
-@import "../sass/4-components/front-page-header";
-@import "../sass/4-components/front-page-submit";
-@import "../sass/4-components/search";
-@import "../sass/4-components/single-page";
-@import "../sass/4-components/single-post";
+@import "../scss/4-components/archive";
+@import "../scss/4-components/comments";
+@import "../scss/4-components/front-page-featured-posts";
+@import "../scss/4-components/front-page-header";
+@import "../scss/4-components/front-page-submit";
+@import "../scss/4-components/search";
+@import "../scss/4-components/single-page";
+@import "../scss/4-components/single-post";

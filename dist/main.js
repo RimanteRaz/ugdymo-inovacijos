@@ -62,9 +62,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ "./src/main.scss");
 
 
-const headline = "Welcome to the webpage";
-document.querySelector("h1").innerText = headline;
-
 }();
 /******/ })()
 ;
