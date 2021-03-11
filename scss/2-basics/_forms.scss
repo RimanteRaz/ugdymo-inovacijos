@@ -1,33 +1,15 @@
-.footer {
-  padding-bottom: 8rem;
-  @media (min-width: $small-screen) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  a {
-    color: $light-1;
-    text-decoration-color: rgba($light-1, 0.5);
-    &:hover {
-      opacity: 0.8;
-    }
-    &:focus {
-      border-radius: 5px;
-    }
-  }
-  .left {
-    max-width: 45ch;
-    padding-bottom: 2rem;
-    h5 {
-      padding-top: 0;
-    }
-  }
-  .right {
-    max-width: 50ch;
+input,
+textarea {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+  color: $dark-gray;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px $primary-light;
   }
 }
-
-// == FORMS
 
 .subscribeForm {
   padding-top: 0.5rem;

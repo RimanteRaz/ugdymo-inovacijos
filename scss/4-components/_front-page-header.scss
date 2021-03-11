@@ -14,7 +14,10 @@
 
 .front-page-header {
   color: $light-1;
-  background: url("images/header-05.png"), linear-gradient(#141414, #052835);
+  background: /*url("../../images/header-05.png"),*/ linear-gradient(
+    #141414,
+    #052835
+  );
   background-size: cover;
   @media (min-width: $small-screen) {
     background-repeat: repeat-x;
@@ -38,7 +41,6 @@
 
 .front-page-header .right {
   display: flex;
-  // align-items: flex-end;
   justify-content: center;
   padding: 1rem 2rem 0 0;
   max-width: 60ch;
@@ -49,7 +51,6 @@
   @media (min-width: $small-screen) {
     position: relative;
     padding-top: 190px;
-    // padding-bottom: 1rem;
     align-items: flex-start;
     justify-content: center;
   }
