@@ -9,9 +9,12 @@
 
 @for $i from 1 to 7 {
   h#{$i} {
-    font-size: 1rem * pow($text-ratio, (6-$i));
-    font-weight: 600;
     padding: 1em 0em 0.5em 0em;
+    font-weight: 600;
+    font-size: 1rem * pow($mobile-text-ratio, (6-$i));
+    @media (min-width: $tablet) {
+      font-size: 1rem * pow($text-ratio, (6-$i));
+    }
   }
 }
 
